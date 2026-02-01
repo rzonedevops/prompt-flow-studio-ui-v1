@@ -128,7 +128,7 @@ export function About() {
   );
 }
 
-function FeatureCard({ icon, title, description }) {
+function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
     <div className="bg-[#252525] rounded-lg p-4">
       <div className="mb-3">{icon}</div>
@@ -138,7 +138,7 @@ function FeatureCard({ icon, title, description }) {
   );
 }
 
-function TechItem({ name }) {
+function TechItem({ name }: { name: string }) {
   return (
     <div className="bg-[#252525] rounded px-3 py-2 text-center">
       <span className="text-gray-300 text-sm">{name}</span>
@@ -146,7 +146,7 @@ function TechItem({ name }) {
   );
 }
 
-function SocialLink({ icon, label, href }) {
+function SocialLink({ icon, label, href }: { icon: React.ReactNode; label: string; href: string }) {
   return (
     <a
       href={href}

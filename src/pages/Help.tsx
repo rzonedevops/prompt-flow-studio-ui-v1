@@ -180,7 +180,7 @@ export function Help() {
   );
 }
 
-function QuickLink({ icon, title, description, href }) {
+function QuickLink({ icon, title, description, href }: { icon: React.ReactNode; title: string; description: string; href: string }) {
   return (
     <a
       href={href}
@@ -193,7 +193,7 @@ function QuickLink({ icon, title, description, href }) {
   );
 }
 
-function HelpArticle({ title, description }) {
+function HelpArticle({ title, description }: { title: string; description: string }) {
   return (
     <button className="w-full flex items-center justify-between p-3 rounded hover:bg-[#252525] text-left">
       <div className="flex items-center">
@@ -208,7 +208,7 @@ function HelpArticle({ title, description }) {
   );
 }
 
-function TopicCard({ title, items }) {
+function TopicCard({ title, items }: { title: string; items: string[] }) {
   return (
     <div className="bg-[#1a1a1a] rounded-lg p-4">
       <h3 className="text-white text-sm font-semibold mb-3">{title}</h3>
@@ -224,7 +224,7 @@ function TopicCard({ title, items }) {
   );
 }
 
-function FAQItem({ question, answer }) {
+function FAQItem({ question, answer }: { question: string; answer: string }) {
   return (
     <div className="pb-4 border-b border-[#333] last:border-b-0">
       <h4 className="text-white text-sm font-semibold mb-2">{question}</h4>

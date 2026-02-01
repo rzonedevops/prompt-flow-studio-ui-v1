@@ -225,7 +225,7 @@ export function Privacy() {
   );
 }
 
-function Section({ title, children }) {
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-8">
       <h2 className="text-white text-xl font-semibold mb-4">{title}</h2>

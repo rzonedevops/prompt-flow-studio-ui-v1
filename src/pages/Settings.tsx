@@ -77,7 +77,7 @@ export function Settings() {
   );
 }
 
-function SettingsTab({ icon, label, active, onClick }) {
+function SettingsTab({ icon, label, active, onClick }: { icon: React.ReactNode; label: string; active: boolean; onClick: () => void }) {
   return (
     <button
       onClick={onClick}
@@ -305,7 +305,7 @@ function LanguageSettings() {
   );
 }
 
-function ThemeOption({ label, active }) {
+function ThemeOption({ label, active }: { label: string; active: boolean }) {
   return (
     <div
       className={`p-3 border rounded text-center cursor-pointer ${
@@ -319,7 +319,7 @@ function ThemeOption({ label, active }) {
   );
 }
 
-function ColorOption({ color, active }) {
+function ColorOption({ color, active }: { color: string; active: boolean }) {
   return (
     <div
       className={`w-10 h-10 rounded cursor-pointer border-2 ${color} ${
