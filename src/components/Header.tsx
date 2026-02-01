@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   FileIcon,
   Save,
@@ -9,6 +10,8 @@ import {
   Settings } from
 'lucide-react';
 export function Header() {
+  const navigate = useNavigate();
+
   return (
     <div className="h-14 bg-[#1a1a1a] border-b border-[#333] flex items-center justify-between px-4">
       <div className="flex items-center">
@@ -30,11 +33,17 @@ export function Header() {
         </button>
       </div>
       <div className="flex items-center">
-        <button className="flex items-center bg-[#2a2a2a] text-white text-sm px-3 py-1.5 rounded mx-1">
+        <button
+          onClick={() => navigate('/help')}
+          className="flex items-center bg-[#2a2a2a] text-white text-sm px-3 py-1.5 rounded mx-1"
+        >
           <HelpCircle size={16} className="mr-1.5" />
           Help
         </button>
-        <button className="flex items-center bg-[#2a2a2a] text-white text-sm px-3 py-1.5 rounded mx-1">
+        <button
+          onClick={() => navigate('/settings')}
+          className="flex items-center bg-[#2a2a2a] text-white text-sm px-3 py-1.5 rounded mx-1"
+        >
           <Settings size={16} className="mr-1.5" />
           Settings
         </button>
